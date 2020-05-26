@@ -1,0 +1,186 @@
+:root {
+  --color-primary:  #004589;
+  --color-success: #063;
+}
+
+/* Flow utilities -------------------------------------------------------- */
+
+.flow > * + * {
+  margin-top: 1.5rem;
+}
+
+.flow-xs > * + * {
+  margin-top: .5rem;
+}
+
+.flow-sm > * + * {
+  margin-top: 1rem;
+}
+
+.flow-lg > * + * {
+  margin-top: 2.5rem;
+}
+
+/* Spacing utilities ------------------------------------------------------ */
+
+.card p:nth-last-child,
+.card-body p:nth-last-child {
+  margin-bottom: 0;
+}
+
+.list-space li {
+    margin-top: 0.25rem;
+}
+
+.list-space-lg li {
+    margin-top: 0.5rem;
+}
+
+.list-space-xl li {
+    margin-top: 0.75rem;
+}
+
+/* Alert resets ------------------------------------------------------------ */
+
+.icon::before {
+  display: none;
+}
+
+.alert {
+  padding-left: .5rem;
+  border-radius: 0;
+}
+
+.alert-success::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  content: '\f058';
+}
+
+.alert-danger::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  content: '\f06a';
+}
+
+.alert-warning::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  content: '\f071';
+}
+
+.alert-primary::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  content: '\f05a';
+}
+
+/* Form resets ------------------------------------------------------------ */
+
+label {
+  margin-bottom: .25rem;
+}
+
+.form-control {
+  color: #000;
+}
+
+input,
+textarea {
+  font-size: inherit;
+  border: 1px solid #999 !important;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.required  {
+    font-weight: 700;
+}
+
+.required::before {
+    content: "*";
+}
+
+/* Table resets ----------------------------------------------------------- */
+
+.table th {
+    border-top: 0;
+}
+
+.table thead th {
+    border-color: var(--color-primary);
+}
+
+.selected {
+    background-color: #cce5ff !important;
+}
+
+.expandable::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  content: '\f330';
+}
+
+.open::before {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900;
+  content: '\f32d';
+}
+
+/* Link resets ------------------------------------------------------------ */
+
+a {
+  color:var(--color-primary);
+  text-decoration: underline;
+}
+
+a:hover,
+.btn-link:hover {
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none !important;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+a.btn-link {
+  text-decoration: underline !important;
+}
+
+/* Text resets ------------------------------------------------------------ */
+
+.text-primary {
+  color:var(--color-primary) !important;
+}
+
+.text-success {
+  color:var(--color-success) !important;
+}
+
+/* Background resets ------------------------------------------------------ */
+
+.bg-primary {
+  background: var(--color-primary) !important;
+}
+
+.bg-success {
+  background: var(--color-success) !important;
+}
+
+/* Button resets ---------------------------------------------------------- */
+
+button[disabled] {
+    pointer-events: none;
+}
+
+/* omitted original button styles that were here */
+
+/* just noticed this looks like a duplicate of a style in the link section, will look into it and resolve by next update */
+.btn-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
