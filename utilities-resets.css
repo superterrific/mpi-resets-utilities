@@ -113,8 +113,12 @@ textarea {
     border-color: var(--color-primary);
 }
 
-.selected {
-    background-color: #cce5ff !important;
+.row-selected {
+	background-color: #cce5ff !important;
+}
+
+.row-alert {
+  background: #fff3cd !important;
 }
 
 .expandable::before {
@@ -123,7 +127,7 @@ textarea {
   content: '\f330';
 }
 
-.open::before {
+.expandable-open::before {
   font-family: 'Font Awesome 5 Pro';
   font-weight: 900;
   content: '\f32d';
