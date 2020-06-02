@@ -151,6 +151,7 @@ a.btn {
   text-decoration: none;
 }
 
+.btn-link,
 a.btn-link {
   text-decoration: underline !important;
   color: var(--color-primary);
