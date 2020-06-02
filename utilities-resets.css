@@ -153,6 +153,48 @@ a.btn {
 
 a.btn-link {
   text-decoration: underline !important;
+  color: var(--color-primary);
+}
+
+/* Modal resets ------------------------------------------------------------ */
+
+.modal-header {
+    border-bottom: unset;
+}
+
+.modal-footer {
+    background: #f8f9fa;
+}
+
+.modal-body {
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Popover resets ------------------------------------------------------------ */
+
+.popover {
+  border: 1px solid #444;
+}
+
+.bs-popover-auto[x-placement^=left]>.arrow::before,
+.bs-popover-left>.arrow::before {
+  border-left-color: #222;
+}
+
+.bs-popover-auto[x-placement^=right]>.arrow::before,
+.bs-popover-right>.arrow::before {
+  border-right-color: #222;
+}
+
+.bs-popover-auto[x-placement^="top"] > .arrow::before,
+.bs-popover-top > .arrow::before {
+  border-top-color: #222;
+}
+
+.bs-popover-auto[x-placement^="bottom"] > .arrow::before,
+.bs-popover-bottom > .arrow::before {
+  border-bottom-color: #222;
 }
 
 /* Text resets ------------------------------------------------------------ */
@@ -182,9 +224,3 @@ button[disabled] {
 }
 
 /* omitted original button styles that were here */
-
-/* just noticed this looks like a duplicate of a style in the link section, will look into it and resolve by next update */
-.btn-link {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
