@@ -49,6 +49,7 @@
 .alert {
   padding-left: .5rem;
   border-radius: 0;
+  font-weight: 500;
 }
 
 .alert-success::before {
@@ -86,7 +87,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-size: inherit;
   border: 1px solid #999 !important;
 }
@@ -172,6 +174,18 @@ a.btn-link {
     padding-bottom: 1.5rem;
 }
 
+.modal-scrolling {
+	max-height: calc(100vh - 400px);
+	overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+	.modal-scrolling {
+		max-height: 20rem;
+		overflow-y: auto;
+	}
+}
+
 /* Popover resets ------------------------------------------------------------ */
 
 .popover {
@@ -218,10 +232,25 @@ a.btn-link {
   background: var(--color-success) !important;
 }
 
+/* Border resets ------------------------------------------------------ */
+
+.border-primary {
+  border: 1px solid var(--color-primary) !important;
+}
+
+.border-success {
+  border: 1px solid var(--color-success) !important;
+}
+
 /* Button resets ---------------------------------------------------------- */
 
 button[disabled] {
     pointer-events: none;
+}
+
+.btn {
+  border-radius: 0;
+  min-width: 4rem;
 }
 
 /* omitted original button styles that were here */
