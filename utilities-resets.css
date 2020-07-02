@@ -93,16 +93,38 @@ select {
   border: 1px solid #999 !important;
 }
 
-.is-invalid {
-  border-color: #dc3545 !important;
-}
-
 .required  {
     font-weight: 700;
 }
 
 .required::before {
     content: "*";
+}
+
+/* Validations resets ----------------------------------------------------- */
+
+.invalid-tooltip {
+  background-color: #e40c21  !important;
+}
+
+.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: #e40c21 !important;
+}
+
+.valid-tooltip {
+  background-color: var(--color-success)  !important;
+}
+
+.is-valid,
+.was-validated .form-control:valid {
+  border-color: var(--color-success) !important;
+}
+
+.valid-feedback,
+.invalid-feedback {
+  font-weight: 600;
+  font-size: .9rem;
 }
 
 /* Table resets ----------------------------------------------------------- */
@@ -149,7 +171,8 @@ a:hover,
   text-decoration: none !important;
 }
 
-a.btn {
+a.btn,
+a.badge {
   text-decoration: none;
 }
 
@@ -242,6 +265,17 @@ a.btn-link {
   border: 1px solid var(--color-success) !important;
 }
 
+.border-light {
+  border: 1px solid #ccc !important;
+}
+
+/* Pagination resets------------------------------------------------------ */
+
+.pagination-disabled {
+  background: #efefef;
+  color: #666;
+}
+ 
 /* Button resets ---------------------------------------------------------- */
 
 button[disabled] {
@@ -253,4 +287,215 @@ button[disabled] {
   min-width: 4rem;
 }
 
-/* omitted original button styles that were here */
+.badge {
+    border-radius: 0;
+    font-weight: 400;
+    padding: 0.45rem 0.6rem;
+}
+
+.badge-pill {
+    font-weight: 400;
+    border-radius: 10rem;
+    padding: 0.45rem 0.8rem;
+}
+
+.btn-xs {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Disabled resets ------------ */
+
+.btn:disabled {
+    opacity: inherit;
+}
+
+.btn-primary:disabled,
+.btn-success:disabled,
+.btn-danger:disabled,
+.btn-warning:disabled,
+.btn-info:disabled,
+.btn-dark:disabled,
+.btn-secondary:disabled,
+.btn-light:disabled,
+.btn-white:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #555;
+}
+
+.btn-outline-primary:disabled,
+.btn-outline-success:disabled,
+.btn-outline-danger:disabled,
+.btn-outline-warning:disabled,
+.btn-outline-info:disabled,
+.btn-outline-dark:disabled,
+.btn-outline-secondary:disabled,
+.btn-outline-light:disabled {
+    background-color: #efefef;
+    border-color: #ccc;
+    color: #555;
+}
+
+/* Default button color resets -------- */
+
+.btn-primary,
+.badge-primary {
+    background-color: #004489;
+    border-color: #004489;
+}
+
+.btn-primary:hover,
+a.badge-primary:hover {
+    background-color: #002f5f;
+    border-color: #002f5f;
+}
+
+.btn-success,
+.badge-success {
+    background-color: #063;
+    border-color: #063;
+}
+
+.btn-success:hover,
+a.badge-success:hover {
+    background-color: #004723;
+    border-color: #004723;
+}
+
+.btn-info,
+.badge-info {
+    background-color: #0780a3;
+    border-color: #0780a3;
+}
+
+.btn-info:hover,
+a.badge-info:hover {
+    background-color: #046a87;
+    border-color: #046a87;
+}
+
+.btn-light,
+.badge-light {
+    background-color: #dadada;
+    border-color: #dadada;
+}
+.btn-light:hover,
+a.badge-light:hover {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #222;
+}
+
+.btn-light:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-white,
+.badge-white {
+    background-color: #fff;
+    border-color: #fff;
+    color: #222;
+}
+
+.btn-white:hover,
+a.badge-white:hover {
+    background-color: #efefef;
+    border-color: #efefef;
+    color: #222;
+}
+
+.btn-link {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Outline button color resets -------- */
+
+.btn-outline-primary {
+    color: #004489;
+    border-color: #004489;
+}
+.btn-outline-primary:hover {
+    background-color: #002f5f;
+    border-color: #002f5f;
+}
+
+.btn-outline-success {
+    color: #063;
+    border-color: #063;
+}
+
+.btn-outline-success:hover {
+    background-color: #063;
+    border-color: #063;
+}
+
+.btn-outline-danger {
+    color: #cc444a;
+    border-color: #cc444a;
+}
+
+.btn-outline-danger:hover {
+    background-color: #cc444a;
+    border-color: #cc444a;
+}
+
+.btn-outline-warning {
+    color: #85710a;
+    border-color: #85710a;
+}
+
+.btn-outline-warning:hover {
+    background-color: #f6c244;
+    border-color: #f6c244;
+    color: #333;
+}
+
+.btn-outline-info {
+    color: #0780a3;
+    border-color: #0780a3;
+}
+
+.btn-outline-info:hover {
+    background-color: #046a87;
+    border-color: #046a87;
+}
+
+.btn-outline-light {
+    color: #666;
+    border-color: #ccc;
+}
+
+/* Cookie banner ---------------------------------------------------------- */
+
+.cookie-banner {
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+
+.cookie-banner p {
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .cookie-banner {
+        font-size: .9rem;
+    flex-direction: column;
+    }
+
+  .cookie-banner p {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
