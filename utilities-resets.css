@@ -84,13 +84,13 @@ label {
 
 .form-control {
   color: #000;
+  border: 1px solid #999;
 }
 
 input,
 textarea,
 select {
   font-size: inherit;
-  border: 1px solid #999 !important;
 }
 
 .required  {
@@ -275,7 +275,7 @@ a.btn-link {
   background: #efefef;
   color: #666;
 }
- 
+
 /* Button resets ---------------------------------------------------------- */
 
 button[disabled] {
