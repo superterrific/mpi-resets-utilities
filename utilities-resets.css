@@ -42,7 +42,8 @@
 
 /* Alert resets ------------------------------------------------------------ */
 
-.icon::before {
+.icon::before,
+.icon::after {
   display: none;
 }
 
@@ -127,6 +128,14 @@ fieldset .form-label {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: .25rem;
+}
+
+.form-text {
+  font-size: .9rem;
+}
+
+.small * .form-text {
+  font-size: .78rem;
 }
 
 /* Validations resets ----------------------------------------------------- */
@@ -534,7 +543,7 @@ a.badge-white:hover {
 }
 
 .btn-outline-light {
-    color: #666;
+    color: #333;
     border-color: #ccc;
 }
 
@@ -551,25 +560,39 @@ a.badge-white:hover {
   border-width: .6em;
 }
 
-/* Cookie banner ---------------------------------------------------------- */
+/* Tabs ------------------------------------------------------------------- */
+.nav-tabs .nav-item .nav-link.active {
+   border-top: 2px solid var(--color-primary);
+   color: #000;
+   font-weight: 500;
+ }
 
+ .nav-tabs .nav-link {
+   text-decoration: none;
+   border-radius: 0;
+ }
+
+.tab-header-large {
+  font-size: 1.25 rem;
+}
+
+/* Cookie banner ---------------------------------------------------------- */
 .cookie-banner {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  background: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 1rem;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #fff;
-}
-
-.cookie-banner p {
-  margin-bottom: 0;
-  margin-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 35rem;
+  opacity: .85;
 }
 
 @media (max-width: 768px) {
