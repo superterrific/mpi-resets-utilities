@@ -40,6 +40,13 @@
     margin-top: 0.75rem;
 }
 
+/* Used to wrap at specific points without using a <br>
+Use a span with class around the text that should have a break after it. */
+.line-break::after {
+  content: '\A';
+  white-space: pre;
+}
+
 /* Full bleed utility ------------------------------------------------------ */
 .full-bleed {
   width: 100vw;
@@ -292,6 +299,25 @@ a.btn-link {
 
 .text-success {
   color:var(--color-success) !important;
+}
+
+/* Additional sizes for display classes */
+.display-5 {
+  font-size: 2.5;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.display-6 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.display-7 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
 }
 
 /* Background resets ------------------------------------------------------ */
@@ -591,6 +617,85 @@ a.badge-white:hover {
 
 .tab-header-large {
   font-size: 1.25 rem;
+}
+
+/* Icon utilities --------------------------------------------------------- */
+
+/* Apply Bootstrap colors to icons.
+Fixes the issue where the hover picks up the text link backgorund color.
+Apply the class to the element that contains the icon, not the icon directly.
+For example, add it to the link, span or div.  */
+.icon-secondary {
+  color: #6C757D;
+}
+
+a.icon-secondary:hover {
+  background-color: unset;
+  color: #5a6268;
+}
+
+.icon-primary {
+  color: #004589;
+}
+
+a.icon-primary:hover {
+  background-color: unset;
+  color: #002f5f;
+}
+
+.icon-success {
+  color: #063;
+}
+
+a.icon-success:hover {
+  background-color: unset;
+  color: #004723;
+}
+
+.icon-info {
+  color: #0780a3;
+}
+
+a.icon-info:hover {
+  background-color: unset;
+  color: #046a87;
+}
+
+.icon-warning {
+    color: #ffc107;
+  }
+
+a.icon-warning:hover {
+  background-color: unset;
+  color: #e0a800;
+}
+
+
+.icon-dark {
+  color: #343a40;
+}
+
+a.icon-dark:hover {
+  background-color: unset;
+  color: #23272b;
+}
+
+.icon-danger {
+  color: #dc3545;
+}
+
+a.icon-danger:hover {
+  background-color: unset;
+  color: #c82333;
+}
+
+.icon-light {
+  color: #dadada;
+}
+
+a.icon-light:hover {
+  background-color: unset;
+  color: #ccc;
 }
 
 /* Cookie banner ---------------------------------------------------------- */
