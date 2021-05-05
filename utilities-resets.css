@@ -238,6 +238,47 @@ a.btn-link {
   color: var(--color-primary);
 }
 
+/* Navbar resets ----------------------------------------------------------- */
+
+.nav-link,
+.navbar-brand {
+  text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #000;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+  color: #707070;
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+  color: #ccc;
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover {
+  filter: brightness(120%);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  filter: brightness(90%)
+}
+
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+  background: unset;
+}
+
 /* Modal resets ------------------------------------------------------------ */
 
 .modal-header {
@@ -442,9 +483,9 @@ button[disabled] {
 .btn-secondary:disabled,
 .btn-light:disabled,
 .btn-white:disabled {
-    background-color: #ccc;
-    border-color: #ccc;
-    color: #555;
+    background-color: #f8f8f8;
+    border-color: #f8f8f8;
+    color: #707070;
 }
 
 .btn-outline-primary:disabled,
@@ -455,9 +496,9 @@ button[disabled] {
 .btn-outline-dark:disabled,
 .btn-outline-secondary:disabled,
 .btn-outline-light:disabled {
-    background-color: #efefef;
+    background-color: #f8f8f8;
     border-color: #ccc;
-    color: #555;
+    color: #707070;
 }
 
 /* Default button color resets -------- */
